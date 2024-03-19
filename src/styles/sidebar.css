@@ -1,0 +1,29 @@
+.sidebar {
+    @apply fixed md:relative top-0 left-0 h-full shrink-0;
+}
+
+/*** Sidebar Toggler ***/
+.sidebar > .sidebar-toggler {
+    @apply absolute inset-y-0 left-full z-10 w-8 h-24 my-auto bg-primary text-white rounded-r-md;
+}
+
+/*** Sidebar Wrapper ***/
+.sidebar > .sidebar-wrapper {
+    @apply w-0 h-full flex bg-primary text-white flex-col overflow-hidden transition-[width] duration-700;
+}
+
+.sidebar.show > .sidebar-wrapper {
+    @apply w-[330px];
+}
+
+.sidebar > .sidebar-wrapper > div[class*="sidebar-"] {
+    @apply w-[330px]
+}
+
+.sidebar > .sidebar-wrapper > .sidebar-header {
+    @apply flex p-4 items-center gap-2;
+}
+
+.sidebar > .sidebar-wrapper > .sidebar-menu {
+    @apply flex flex-col py-4;
+}
