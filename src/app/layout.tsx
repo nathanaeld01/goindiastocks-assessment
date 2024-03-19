@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 
 import { cn } from "@/lib/utils";
 
+import { Sidebar } from "@/components/sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: Props) {
 	return (
 		<html lang="en">
 			<body className={cn("flex w-full h-screen", inter.className)}>
+				<Sidebar />
 				{children}
 			</body>
 		</html>
