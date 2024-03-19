@@ -6,7 +6,18 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"style": {
+				"useSelfClosingElements": "off"
+			},
+			"a11y": {
+				"noSvgWithoutTitle": "off",
+				"useKeyWithClickEvents": "off"
+			}
 		}
+	},
+	"formatter": {
+		"indentWidth": 4,
+		"indentStyle": "tab"
 	}
 }
