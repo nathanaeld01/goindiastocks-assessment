@@ -1,6 +1,6 @@
 "use client";
 
-import "./sidebar.css";
+import "@/styles/sidebar.css";
 
 import clsx from "clsx";
 import { BellIcon, User2Icon } from "lucide-react";
