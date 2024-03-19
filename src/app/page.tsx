@@ -1,3 +1,4 @@
+import { Post } from "@/components/post";
 import { Story } from "@/components/story";
 import { TabContent, TabItem, Tabs } from "@/components/tabs";
 
@@ -11,6 +12,12 @@ export default function Page() {
 			<div className="wrapper">
 				<TabContent index="discussion" className="p-5 md:p-0 flex-[7]">
 					<h2 className="section-title">Discussion Forum</h2>
+					<div className="space-y-4">
+						<Post author="Lorem Ipsum" />
+						<Post author="Lorem Ipsum" />
+						<Post author="Lorem Ipsum" />
+						<Post author="Lorem Ipsum" />
+					</div>
 				</TabContent>
 				<TabContent index="market" className="p-5 md:p-0 flex-[3]">
 					<h2 className="section-title">Market Stories</h2>
