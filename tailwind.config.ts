@@ -17,6 +17,7 @@ const config: Config = {
 			},
 			red: "#ef4444",
 			gray: "#6b7280",
+			offwhite: "#d2d2d2",
 		},
 		extend: {},
 	},

@@ -17,3 +17,11 @@ body {
 .sidebar.show ~ .content {
     @apply md:max-w-[calc(100%-330px)];
 }
+
+.section-title {
+    @apply hidden md:block md:mb-4 text-2xl text-red font-semibold uppercase;
+}
+
+.content .wrapper {
+    @apply max-w-[1100px] w-full mx-auto flex md:p-5 gap-4;
+}
