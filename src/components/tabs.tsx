@@ -2,7 +2,7 @@
 
 import { TabContext, type TabIndex, useTabs } from "@/context/tabs-context";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type TabsProps = {
 	defaultIndex?: TabIndex;
@@ -22,6 +22,18 @@ type TabContentProps = {
 
 const Tabs = ({ defaultIndex, children }: TabsProps) => {
 	const [activeTab, setActiveTab] = useState<TabIndex>(defaultIndex ?? "");
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth >= 768 && defaultIndex) {
+				setActiveTab(defaultIndex);
+			}
+		};
+
+		window.addEventListener("resize", handleResize);
+
+		return () => window.removeEventListener("resize", handleResize);
+	}, [defaultIndex]);
 
 	return (
 		<TabContext.Provider value={{ activeTab, setActiveTab }}>
