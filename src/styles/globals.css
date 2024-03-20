@@ -11,11 +11,11 @@ body {
 }
 
 .content {
-    @apply w-full h-full flex flex-col max-w-full transition-[max-width] duration-700;
+    @apply w-full h-full flex flex-col max-w-full lg:transition-[max-width] lg:duration-700;
 }
 
 .sidebar.show ~ .content {
-    @apply md:max-w-[calc(100%-330px)];
+    @apply lg:max-w-[calc(100%-330px)];
 }
 
 .section-title {
