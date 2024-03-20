@@ -1,5 +1,5 @@
 .sidebar {
-    @apply fixed z-50 md:relative top-0 left-0 h-full shrink-0;
+    @apply fixed z-50 lg:relative top-0 left-0 h-full shrink-0;
 }
 
 /*** Sidebar Toggler ***/
