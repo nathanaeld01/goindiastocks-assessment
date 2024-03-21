@@ -8,20 +8,31 @@ import {
 	MessageSquareIcon,
 	Share2Icon,
 } from "lucide-react";
+import Image from "next/image";
 
 type Props = {
 	content: string;
 	author: string;
+	time: string;
 	likes?: number;
 	views?: number;
 	comments?: number;
 };
 
-export const Post = ({ content, author, likes, views, comments }: Props) => {
+export const Post = ({
+	content,
+	author,
+	time,
+	likes,
+	views,
+	comments,
+}: Props) => {
 	return (
 		<div className="post-item">
 			<div className="post-header">
-				<div className="relative size-9 bg-primary/10 rounded-full"></div>
+				<div className="relative size-9 rounded-full overflow-hidden">
+					<Image src="/avatar.png" alt={`${author} Avatar`} fill />
+				</div>
 			</div>
 			<div className="post-content">
 				<div className="flex py-2 items-center">
@@ -32,7 +43,7 @@ export const Post = ({ content, author, likes, views, comments }: Props) => {
 						Sector 2
 					</span>
 					<span className="ml-auto text-[.675rem] text-lightblue font-semibold">
-						2 min ago
+						{time}
 					</span>
 				</div>
 				<div className="text-sm text-gray">{content}</div>
@@ -53,6 +64,7 @@ export const Post = ({ content, author, likes, views, comments }: Props) => {
 						<MessageSquareIcon className="size-5" />
 						<span className="flex font-semibold text-xs">{`${formatNumber(
 							comments ?? 0,
+							1,
 						)} Comments`}</span>
 					</div>
 					<div className="post-metric">
