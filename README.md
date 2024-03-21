@@ -8,6 +8,7 @@ Please create the below UI (Figure 1, Figure2, Figure 3- Different aspect of a s
 - [x] It is acceptable if the Dummy data is not exactly matching (approximate match will do).
 
 ### Demo
+
 [Link to live demo](https://goindiastocks-assessment.vercel.app/)
 
 ### Run Locally
