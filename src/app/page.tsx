@@ -1,10 +1,21 @@
-import { Post } from "@/components/post";
-import { Story } from "@/components/story";
+import { Post, type PostType } from "@/components/post";
+import { Story, type StoryType } from "@/components/story";
 import { TabContent, TabItem, Tabs } from "@/components/tabs";
 
 import { discussionData, storiesData } from "@/lib/data";
 
-export default function Page() {
+export default async function Page() {
+	// comment out the following lines
+	const response = await fetch(
+		`${process.env.NEXT_PUBLIC_BASE_URL}/data.json`,
+	);
+	const data = await response.json();
+	const { discussionData, storiesData } = data as {
+		discussionData: PostType[];
+		storiesData: StoryType[];
+	};
+	// upto here
+
 	return (
 		<Tabs defaultIndex="discussion">
 			<div className="flex md:hidden">

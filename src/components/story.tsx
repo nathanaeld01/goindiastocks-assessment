@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-type Props = {
+export type StoryType = {
 	title: string;
 	image: string;
 	content: string;
 };
 
-export const Story = ({ title, image, content }: Props) => {
+export const Story = ({ title, image, content }: StoryType) => {
 	return (
 		<div className="flex flex-col border border-offwhite rounded-md overflow-hidden">
 			<div className="relative h-32 aspect-video">

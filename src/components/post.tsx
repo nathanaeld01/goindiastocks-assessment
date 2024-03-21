@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-type Props = {
+export type PostType = {
 	content: string;
 	author: string;
 	time: string;
@@ -26,7 +26,7 @@ export const Post = ({
 	likes,
 	views,
 	comments,
-}: Props) => {
+}: PostType) => {
 	return (
 		<div className="post-item">
 			<div className="post-header">
